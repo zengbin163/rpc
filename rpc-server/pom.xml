@@ -87,6 +87,11 @@
 			<artifactId>cglib</artifactId>
 			<version>3.1</version>
 		</dependency>
+		<dependency>
+			<groupId>com.cheguo</groupId>
+			<artifactId>rpc-base</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<resources>
@@ -117,7 +122,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
-					<warName>chain</warName>
+					<warName>rpc</warName>
 					<archive>
 						<addMavenDescriptor>false</addMavenDescriptor>
 					</archive>
@@ -125,47 +130,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<!-- 配置私服使用信息 -->
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>libs-release</name>
-			<url>http://10.10.13.5:8081/artifactory/libs-release</url>
-		</repository>
-		<repository>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-			<id>snapshots</id>
-			<name>libs-snapshot</name>
-			<url>http://10.10.13.5:8081/artifactory/libs-snapshot</url>
-		</repository>
-		<repository>
-			<snapshots />
-			<id>third-party</id>
-			<name>third-party</name>
-			<url>http://10.10.13.5:8081/artifactory/third-party</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>plugins-release</name>
-			<url>http://10.10.13.5:8081/artifactory/plugins-release</url>
-		</pluginRepository>
-		<pluginRepository>
-			<snapshots />
-			<id>snapshots</id>
-			<name>plugins-snapshot</name>
-			<url>http://10.10.13.5:8081/artifactory/plugins-snapshot</url>
-		</pluginRepository>
-	</pluginRepositories>
 </project>
